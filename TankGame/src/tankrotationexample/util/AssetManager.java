@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.*;
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+
 
 import static javax.swing.UIManager.put;
 import static jdk.xml.internal.SecuritySupport.getClassLoader;
@@ -31,15 +34,18 @@ public class AssetManager {
                 );
 
     }
-    private static Sound loadSound(String path) throws IOException, UnsupportedAudioFileException, LineUnavailableException{
-        AudioInputStream ais = AudioSystem.getAudioInputStream(
-                Objects.requireNonNull(
-                        AssetManager.class.getClassLoader().getResourceAsStream(path)
-                        )
+    private static Sound loadSound(String path)
+            throws IOException, UnsupportedAudioFileException, LineUnavailableException{
+
+        InputStream raw = Objects.requireNonNull(
+                AssetManager.class.getClassLoader().getResourceAsStream(path),
+                "Could not find sound: " + path
                 );
-                Clip c = AudioSystem.getClip();
-                c.open(ais);
-                return new Sound (c);
+        BufferedInputStream buffered = new BufferedInputStream(raw);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(buffered);
+        Clip c = AudioSystem.getClip();
+        c.open(ais);
+        return new Sound (c);
     }
 
     private static void loadSprites() {
