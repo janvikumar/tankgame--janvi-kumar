@@ -44,6 +44,8 @@ public class Launcher {
         this.jf.setTitle("Tank Wars Game"); // setting the title of the JFrame window.
         // when the GUI is closed, this will also shut down the VM
         this.jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        System.out.println("TANKGAME JAR VERSION: FINAL BUILD 12/29");
+
     }
 
     private void initUIComponents() {
