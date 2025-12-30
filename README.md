@@ -19,11 +19,15 @@ First step to take is cloning the project rep from GitHUB to computer. Then, ope
 
 ***Steps to Build Project
 ---
-From the top menu, select Build → Build Project to compile the source code. To create the runnable JAR file, select Build → Build Artifacts → Build, which will generate TankGame.jar in the JAR/ folder.
+From the top menu, select Build → Build Project to compile the source code. 
+To create the runnable JAR file, select Build → Build Artifacts → Build, which will generate TankGame.jar in the JAR/ folder.
 
 ***Steps to Run Project
 ---
-Run the game by executing java -jar TankGame.jar from the terminal. 
+Download the repository as a ZIP from GitHub and unzip it.  
+Open a terminal, navigate into the project folder, and run: cd tankgame--janvi-kumar-main
+java -jar TankGame/jar/TankGame.jar
+
 
 ***Controls to play your Game
 ---
