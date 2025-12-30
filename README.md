@@ -24,9 +24,11 @@ To create the runnable JAR file, select Build → Build Artifacts → Build, whi
 
 ***Steps to Run Project
 ---
-Download the repository as a ZIP from GitHub and unzip it.  
-Open a terminal, navigate into the project folder, and run: cd tankgame--janvi-kumar-main
-java -jar TankGame/jar/TankGame.jar
+Download the repository as a ZIP from GitHub and unzip it.
+On terminal: cd ~/Downloads/tankgame--janvi-kumar-main
+Command to run game: java -jar TankGame/jar/TankGame.jar
+Then Select Level and press start.
+
 
 
 ***Controls to play your Game
